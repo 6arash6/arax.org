@@ -443,7 +443,17 @@ const metadata = {
 
   <!-- Contact Widget *************** -->
 
-  <Contact id="contact" />
+  <Contact
+    id="contact"
+    title="Get in Touch"
+    subtitle="Open to investors, grants, pilots, and partnerships."
+    inputs={[
+      { name: 'name', label: 'Your Name', placeholder: 'Your Name', type: 'text' },
+      { name: 'email', label: 'Your Email', placeholder: 'your@email.com', type: 'email' },
+    ]}
+    textarea={{ name: 'message', label: 'Your Message', placeholder: 'Your Message', rows: 4 }}
+    button="Send Message"
+  />
 
   <!-- CallToAction Widget *********** -->
 

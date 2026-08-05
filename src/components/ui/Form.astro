@@ -2,10 +2,12 @@
 import type { Form as Props } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
-const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
+const { inputs, textarea, disclaimer, button = 'Contact us', description = '', action = 'https://formsubmit.co/arash.javan@araxlabs.org' } = Astro.props;
 ---
 
-<form>
+<form action={action} method="POST">
+  <input type="hidden" name="_next" value="https://araxlabs.org/#contact" />
+  <input type="hidden" name="_captcha" value="false" />
   {
     inputs &&
       inputs.map(
