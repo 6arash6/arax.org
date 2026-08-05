@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rg --files --glob '**/*' /workspaces/thesis --sort modified)",
+      "Bash(find /workspaces/thesis -type f | head -50)",
+      "Bash(find /workspaces/thesis -type f -not -path '*/\\.git/*' | sort)",
+      "Bash(ls -la /workspaces/thesis/agentic-ai-bootcamp/ | head -20)",
+      "Bash(cat /workspaces/thesis/agentic-ai-bootcamp/docker-compose.yml | head -50)",
+      "Bash(tree -L 3 -I '.git|node_modules' /workspaces/thesis 2>/dev/null | head -150 || find /workspaces/thesis -not -path '*/\\.g…)",
+      "Bash(tree -L 2 -I '.git|node_modules' /workspaces/arax.org 2>/dev/null || find /workspaces/arax.org -not -path '*/\\.git/*' -t…)",
+      "Bash(cd /workspaces/thesis && git log --oneline -20)",
+      "Bash(head -50 /workspaces/thesis/CV/THESIS_ARAX_SUMMARY.md)",
+      "Bash(wc -l /workspaces/thesis/thesis/chapters/*/*.md 2>/dev/null | tail -1)",
+      "Bash(du -sh /workspaces/thesis /workspaces/arax.org)",
+      "Bash(find /workspaces/thesis -name \"*.py\" -not -path '*/\\.git/*' -not -path '*/node_modules/*' | wc -l)",
+      "Bash(find /workspaces/thesis -name \"*.md\" -not -path '*/\\.git/*' -not -path '*/node_modules/*' | wc -l)",
+      "Bash(ls /workspaces/thesis/CV/ 2>/dev/null | head -20 && cat /workspaces/thesis/CV/THESIS_ARAX_SUMMARY.md 2>/dev/null | head …)",
+      "Bash(ls /workspaces/thesis/CV/*.png /workspaces/thesis/CV/*.jpg 2>/dev/null)"
+    ]
+  }
+}

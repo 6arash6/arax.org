@@ -1,0 +1,44 @@
+site:
+  name: ARAX LABS
+  site: 'https://araxlabs.org'
+  base: '/'
+  trailingSlash: false
+
+  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+
+# Default SEO metadata
+metadata:
+  title:
+    default: ARAX LABS
+    template: '%s — ARAX LABS'
+  description: "AI-Driven Predictive Scaling for Energy-Efficient Data Center Infrastructure. Reduce energy costs by 15-30%."
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: ARAX LABS
+    images:
+      - url: '~/assets/images/default.png'
+        width: 1200
+        height: 628
+    type: website
+  twitter:
+    handle: '@AraX_Labs'
+    site: '@AraX_Labs'
+    cardType: summary_large_image
+
+i18n:
+  language: en
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: false
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+
+ui:
+  theme: 'system'

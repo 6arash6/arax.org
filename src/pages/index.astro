@@ -1,34 +1,478 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Hero from '../components/Hero.astro';
-import Problem from '../components/Problem.astro';
-import Solution from '../components/Solution.astro';
-import GridSaas from '../components/GridSaas.astro';
-import Dashboard from '../components/Dashboard.astro';
-import Technology from '../components/Technology.astro';
-import Results from '../components/Results.astro';
-import Market from '../components/Market.astro';
-import Traction from '../components/Traction.astro';
-import Team from '../components/Team.astro';
-import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Contact from '~/components/widgets/Contact.astro';
+
+const metadata = {
+  title: 'ARAX LABS — AI-Driven Predictive Scaling for Energy-Efficient Infrastructure',
+  ignoreTitleTemplate: true,
+};
 ---
 
-<Layout title="ARAX LABS — AI-Driven Predictive Scaling for Energy-Efficient Infrastructure">
-  <Navbar />
-  <main>
-    <Hero />
-    <Problem />
-    <Solution />
-    <GridSaas />
-    <Dashboard />
-    <Technology />
-    <Results />
-    <Market />
-    <Traction />
-    <Team />
-    <Contact />
-  </main>
-  <Footer />
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'See Our Solution',
+        href: '#solution',
+        icon: 'tabler:arrow-down',
+      },
+      { text: 'Get in Touch', href: '#contact' },
+    ]}
+  >
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white">ARAX LABS</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold">AI-Driven Predictive Scaling</span> for Energy-Efficient Infrastructure.<br />
+      Reduce data center energy costs by <span class="font-semibold">15–30%</span> through intelligent predictive scaling.
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="INiTS ScaleUp 2025 | AWS First Incubator 2026 | TRL 6" description="Validated on real Kubernetes clusters — not just a thesis project." />
+
+  <!-- Problem Section *************** -->
+
+  <section id="problem" class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center dark:text-gray-200">The Problem</h2>
+      <p class="text-muted text-lg mb-12 text-center max-w-2xl mx-auto dark:text-slate-300">
+        Data centers waste billions in energy every year. The AI boom is making it worse.
+      </p>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div class="text-5xl font-bold text-primary mb-4">~30%</div>
+          <p class="text-gray-900 dark:text-gray-100 text-xl font-medium mb-4">of data center energy is wasted</p>
+          <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+            <li class="flex items-start gap-3">
+              <span class="text-primary mt-1">→</span>
+              <span>Zombie workloads running with no real purpose</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary mt-1">→</span>
+              <span>Static resource allocation that doesn't adapt to actual load</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary mt-1">→</span>
+              <span>Observability systems scraping constantly — even when nothing happens</span>
+            </li>
+          </ul>
+        </div>
+        <div class="p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div class="text-5xl font-bold text-amber-500 mb-4">Grid Stress</div>
+          <p class="text-gray-900 dark:text-gray-100 text-xl font-medium mb-4">AI boom is overloading energy grids</p>
+          <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+            <li class="flex items-start gap-3">
+              <span class="text-amber-500 mt-1">→</span>
+              <span>Single AI training run: hundreds of megawatts</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-amber-500 mt-1">→</span>
+              <span>Grid operators can't predict data center load</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-amber-500 mt-1">→</span>
+              <span>Emergency peak power is expensive & dirty</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section *************** -->
+
+  <section id="solution" class="py-16 md:py-20 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center dark:text-gray-200">The Solution</h2>
+      <p class="text-muted text-lg mb-12 text-center max-w-2xl mx-auto dark:text-slate-300">
+        AI-driven predictive scaling that reduces energy consumption by 15–30%.
+      </p>
+      
+      <!-- Big stat -->
+      <div class="text-center mb-16">
+        <div class="text-6xl md:text-8xl font-bold text-primary mb-4">15–30%</div>
+        <p class="text-xl text-gray-600 dark:text-gray-400">OPEX reduction through predictive scaling</p>
+      </div>
+
+      <!-- Three pillars -->
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="text-center p-8 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div class="text-4xl mb-4">🔮</div>
+          <h3 class="text-gray-900 dark:text-gray-100 text-xl font-semibold mb-3">Predictive</h3>
+          <p class="text-gray-600 dark:text-gray-400">Forecast workload stability before problems occur. Not reactive autoscaling — proactive optimization.</p>
+        </div>
+        <div class="text-center p-8 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div class="text-4xl mb-4">🔧</div>
+          <h3 class="text-gray-900 dark:text-gray-100 text-xl font-semibold mb-3">Tool-Agnostic</h3>
+          <p class="text-gray-600 dark:text-gray-400">Works across Kubernetes, Slurm, MPI, OpenStack, Terraform. No vendor lock-in.</p>
+        </div>
+        <div class="text-center p-8 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="text-gray-900 dark:text-gray-100 text-xl font-semibold mb-3">Energy-Aware</h3>
+          <p class="text-gray-600 dark:text-gray-400">Minimizes monitoring overhead while maintaining SRE visibility. Kepler-validated energy savings.</p>
+        </div>
+      </div>
+
+      <!-- Tech brief -->
+      <div class="text-center p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+        <p class="text-gray-600 dark:text-gray-400">
+          <strong class="text-gray-900 dark:text-gray-100">Core:</strong> eBPF + Kepler telemetry · LightGBM models · ~4ms inference · Model-Predictive Control
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid-SaaS Section *************** -->
+
+  <section id="gridsaas" class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center dark:text-gray-200">The Vision: Grid-SaaS</h2>
+      <p class="text-muted text-lg mb-12 text-center max-w-2xl mx-auto dark:text-slate-300">
+        From data center optimization to energy utility intelligence.
+      </p>
+
+      <!-- Pivot flow -->
+      <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
+        <div class="p-8 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div class="text-sm text-primary font-semibold mb-2">Phase 1 — B2B</div>
+          <h3 class="text-gray-900 dark:text-gray-100 text-xl font-semibold mb-3">Data Center Optimization</h3>
+          <p class="text-gray-600 dark:text-gray-400">Data centers reduce their energy costs by 15–30% through intelligent predictive scaling.</p>
+        </div>
+        <div class="p-8 rounded-lg border-2 border-primary bg-primary/5">
+          <div class="text-sm text-primary font-semibold mb-2">Phase 2 — B2B2B</div>
+          <h3 class="text-gray-900 dark:text-gray-100 text-xl font-semibold mb-3">Grid-SaaS for Energy Utilities</h3>
+          <p class="text-gray-600 dark:text-gray-400">Energy utilities predict data center load to manage grid congestion caused by the AI boom.</p>
+        </div>
+      </div>
+
+      <!-- Quote -->
+      <blockquote class="border-l-4 border-primary pl-6 py-4 mb-12">
+        <p class="text-gray-600 dark:text-gray-400 italic text-lg leading-relaxed">
+          "Our customer is no longer just the data center trying to save power. Our customer is the energy utility provider. We sell them predictive load forecasting to manage grid congestion caused by the AI boom."
+        </p>
+      </blockquote>
+
+      <!-- Benefits -->
+      <div class="flex flex-wrap gap-3 justify-center">
+        <span class="px-4 py-2 rounded-lg text-sm border border-primary/30 bg-primary/10 text-primary">Demand Response</span>
+        <span class="px-4 py-2 rounded-lg text-sm border border-primary/30 bg-primary/10 text-primary">Day-Ahead Market Optimization</span>
+        <span class="px-4 py-2 rounded-lg text-sm border border-primary/30 bg-primary/10 text-primary">Renewable Integration</span>
+        <span class="px-4 py-2 rounded-lg text-sm border border-primary/30 bg-primary/10 text-primary">EU EED Compliance</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard Section *************** -->
+
+  <section id="dashboard" class="py-16 md:py-20 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center dark:text-gray-200">Dashboard Preview</h2>
+      <p class="text-muted text-lg mb-12 text-center max-w-2xl mx-auto dark:text-slate-300">
+        Live monitoring: chaos experiments, CPU metrics, stability timeline.
+      </p>
+
+      <!-- Dashboard placeholder -->
+      <div class="rounded-2xl overflow-hidden mb-8 border border-gray-200 dark:border-gray-700">
+        <div class="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center relative">
+          <img src="/img/dashboard/grafana-preview.png" alt="ARAX LABS Dashboard" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8 dashboard-fallback" style="display:none;">
+            <div class="text-6xl mb-4">📊</div>
+            <p class="text-gray-900 dark:text-gray-100 text-xl font-semibold mb-2">Dashboard Demo Coming Soon</p>
+            <p class="text-gray-600 dark:text-gray-400">Recording with Noteboom...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="flex flex-wrap gap-3 justify-center">
+        <span class="px-4 py-2 rounded-lg text-sm border border-primary/30 bg-primary/10 text-primary">Chaos Mesh Integration</span>
+        <span class="px-4 py-2 rounded-lg text-sm border border-primary/30 bg-primary/10 text-primary">Real-time Energy Metrics</span>
+        <span class="px-4 py-2 rounded-lg text-sm border border-primary/30 bg-primary/10 text-primary">Dynamic Thresholds</span>
+        <span class="px-4 py-2 rounded-lg text-sm border border-primary/30 bg-primary/10 text-primary">Adaptive Scrape Control</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Section *************** -->
+
+  <section id="technology" class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center dark:text-gray-200">Technology Stack</h2>
+      <p class="text-muted text-lg mb-12 text-center max-w-2xl mx-auto dark:text-slate-300">
+        Full-stack: eBPF telemetry → Kepler energy measurement → LightGBM prediction → MPC control.
+      </p>
+
+      <!-- Tech grid -->
+      <div class="grid md:grid-cols-2 gap-6 mb-12">
+        <div class="p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <h3 class="text-primary font-semibold mb-2">Telemetry</h3>
+          <p class="text-gray-600 dark:text-gray-400">eBPF, Kepler, Prometheus, OpenTelemetry</p>
+        </div>
+        <div class="p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <h3 class="text-primary font-semibold mb-2">ML Models</h3>
+          <p class="text-gray-600 dark:text-gray-400">LightGBM, XGBoost, LSTM, SGD Online</p>
+        </div>
+        <div class="p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <h3 class="text-primary font-semibold mb-2">Orchestration</h3>
+          <p class="text-gray-600 dark:text-gray-400">Kubernetes, Slurm, MPI, OpenShift, Terraform</p>
+        </div>
+        <div class="p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <h3 class="text-primary font-semibold mb-2">Cloud</h3>
+          <p class="text-gray-600 dark:text-gray-400">Azure, GCP, AWS, OpenStack, Oracle Cloud</p>
+        </div>
+      </div>
+
+      <!-- Thesis figures -->
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
+          <img src="/img/thesis/fig3_2_top20_mi.png" alt="Feature Importance" class="w-full" />
+          <div class="p-4">
+            <p class="text-sm text-gray-600 dark:text-gray-400">Feature importance analysis — top 20 metrics for stability prediction</p>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
+          <img src="/img/thesis/fig3_3_shap.png" alt="SHAP Analysis" class="w-full" />
+          <div class="p-4">
+            <p class="text-sm text-gray-600 dark:text-gray-400">SHAP values — interpretable model predictions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section *************** -->
+
+  <section id="results" class="py-16 md:py-20 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center dark:text-gray-200">Results</h2>
+      <p class="text-muted text-lg mb-12 text-center max-w-2xl mx-auto dark:text-slate-300">
+        Empirical validation: LightGBM wins on accuracy, speed, and energy footprint.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
+          <img src="/img/thesis/fig3_4_stability_timeline.png" alt="Stability Timeline" class="w-full" />
+          <div class="p-4">
+            <p class="text-gray-900 dark:text-gray-100 font-medium">Stability Timeline</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Adaptive scaling maintains stability during workload transitions</p>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
+          <img src="/img/thesis/fig3_5_detection_delay.png" alt="Detection Delay" class="w-full" />
+          <div class="p-4">
+            <p class="text-gray-900 dark:text-gray-100 font-medium">Detection Delay</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Fault detection delays under 5% vs. static configurations</p>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
+          <img src="/img/thesis/summary_model_comparison.png" alt="Model Comparison" class="w-full" />
+          <div class="p-4">
+            <p class="text-gray-900 dark:text-gray-100 font-medium">Model Comparison</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">LightGBM: 10x better RMSE than baselines, 2x faster than LSTM</p>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
+          <img src="/img/thesis/exp2_roc_curves.png" alt="ROC Curves" class="w-full" />
+          <div class="p-4">
+            <p class="text-gray-900 dark:text-gray-100 font-medium">ROC Curves</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">~4ms inference latency — suitable for real-time control loops</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Market Section *************** -->
+
+  <section id="market" class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center dark:text-gray-200">Market Opportunity</h2>
+      <p class="text-muted text-lg mb-12 text-center max-w-2xl mx-auto dark:text-slate-300">
+        Two revenue streams: direct data center savings + energy utility SaaS.
+      </p>
+
+      <!-- Market segments -->
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="p-8 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
+          <h3 class="text-gray-900 dark:text-gray-100 text-xl font-semibold mb-4">Data Centers</h3>
+          <div class="text-4xl font-bold text-primary mb-2">€500K–€5M</div>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">annual energy costs per mid-size facility</p>
+          <div class="text-green-500 font-medium">15–30% savings → €75K–€1.5M/customer</div>
+        </div>
+        <div class="p-8 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
+          <h3 class="text-gray-900 dark:text-gray-100 text-xl font-semibold mb-4">Energy Utilities</h3>
+          <div class="text-4xl font-bold text-primary mb-2">B2B2B SaaS</div>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">Predictive load forecasting for grid management</p>
+          <div class="text-green-500 font-medium">Larger contract values, recurring revenue</div>
+        </div>
+      </div>
+
+      <!-- ARR projection -->
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="p-8 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
+          <div class="text-4xl font-bold text-green-500 mb-2">€37.5K–€3M</div>
+          <p class="text-gray-600 dark:text-gray-400">ARR potential by Year 2 (5–10 customers)</p>
+        </div>
+        <div class="p-8 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
+          <div class="text-4xl font-bold text-green-500 mb-2">10–20%</div>
+          <p class="text-gray-600 dark:text-gray-400">of customer savings = ARAX revenue</p>
+        </div>
+      </div>
+
+      <!-- Market drivers -->
+      <div class="flex flex-wrap gap-3 justify-center">
+        <span class="px-4 py-2 rounded-lg text-sm border border-primary/30 bg-primary/10 text-primary">EU Green Deal</span>
+        <span class="px-4 py-2 rounded-lg text-sm border border-primary/30 bg-primary/10 text-primary">Energy Efficiency Directive</span>
+        <span class="px-4 py-2 rounded-lg text-sm border border-primary/30 bg-primary/10 text-primary">AI Infrastructure Boom</span>
+        <span class="px-4 py-2 rounded-lg text-sm border border-primary/30 bg-primary/10 text-primary">ESG Requirements</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Traction Section *************** -->
+
+  <section id="traction" class="py-16 md:py-20 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center dark:text-gray-200">Traction</h2>
+      <p class="text-muted text-lg mb-12 text-center max-w-2xl mx-auto dark:text-slate-300">
+        Real validation from day one.
+      </p>
+
+      <!-- Timeline -->
+      <div class="grid md:grid-cols-2 gap-6 mb-12">
+        <div class="p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div class="text-primary font-semibold text-sm mb-2">Dec 2025</div>
+          <p class="text-gray-900 dark:text-gray-100 font-medium">Accepted into <strong>INiTS ScaleUp Program</strong></p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Vienna's premier high-tech incubator</p>
+        </div>
+        <div class="p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div class="text-primary font-semibold text-sm mb-2">2026</div>
+          <p class="text-gray-900 dark:text-gray-100 font-medium"><strong>AWS First Incubator</strong> — pitch submitted</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Infrastructure credits & mentorship</p>
+        </div>
+        <div class="p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div class="text-primary font-semibold text-sm mb-2">TRL 6</div>
+          <p class="text-gray-900 dark:text-gray-100 font-medium">Technology demonstrated in relevant environment</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Validated on real Kubernetes clusters</p>
+        </div>
+        <div class="p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div class="text-primary font-semibold text-sm mb-2">R&D</div>
+          <p class="text-gray-900 dark:text-gray-100 font-medium">Master's thesis = direct R&D pipeline</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">FH Technikum Wien, MSc Data Science</p>
+        </div>
+      </div>
+
+      <!-- YouTube -->
+      <div class="text-center">
+        <p class="text-gray-600 dark:text-gray-400 mb-4">Watch our pitch:</p>
+        <a href="https://www.youtube.com/@AraX-Labs" target="_blank" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+          <span>▶</span> @AraX-Labs on YouTube
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section *************** -->
+
+  <section id="team" class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center dark:text-gray-200">Team</h2>
+      <p class="text-muted text-lg mb-12 text-center max-w-2xl mx-auto dark:text-slate-300">
+        Unique combination of energy domain expertise, cloud infrastructure, and AI/ML.
+      </p>
+
+      <div class="p-8 md:p-12 rounded-lg border border-gray-200 dark:border-gray-700">
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Left: Info -->
+          <div>
+            <h3 class="text-2xl text-gray-900 dark:text-gray-100 font-bold mb-2">Arash Javan Mojarad</h3>
+            <p class="text-primary text-lg mb-6">Founder & CTO</p>
+            <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+              <li class="flex items-start gap-3">
+                <span class="text-primary mt-1">→</span>
+                <span>MSc Electrical Engineering (Energy Systems)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-primary mt-1">→</span>
+                <span>MSc Data Science — FH Technikum Wien</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-primary mt-1">→</span>
+                <span>Platform Engineer — TU Wien VSC (MUSICA Supercomputer)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-primary mt-1">→</span>
+                <span>95+ certifications (Azure, Red Hat, LPIC-1, Oracle, IBM)</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right: Venn diagram -->
+          <div>
+            <h4 class="text-primary font-semibold mb-6">Unique Positioning</h4>
+            <div class="grid grid-cols-3 gap-3 mb-6">
+              <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
+                <p class="text-primary font-semibold text-sm">Energy Systems</p>
+              </div>
+              <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
+                <p class="text-primary font-semibold text-sm">MLOps</p>
+              </div>
+              <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
+                <p class="text-primary font-semibold text-sm">Distributed Systems</p>
+              </div>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400 italic">Most tools optimize one. ARAX connects all three.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Widget *************** -->
+
+  <Contact />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact Us',
+        href: '#contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to reduce your energy costs?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Open to investors, grants, pilots, and partnerships.
+    </Fragment>
+  </CallToAction>
 </Layout>
+
+<script>
+  document.querySelectorAll('img[onerror]').forEach(img => {
+    img.addEventListener('error', function() {
+      this.style.display = 'none';
+      const fallback = this.nextElementSibling;
+      if (fallback) fallback.style.display = 'flex';
+    });
+  });
+</script>
