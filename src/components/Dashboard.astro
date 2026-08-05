@@ -1,0 +1,43 @@
+---
+---
+
+<section id="dashboard" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+      <span class="gradient-text">Dashboard Preview</span>
+    </h2>
+    <p class="text-slate-400 text-lg mb-12 max-w-2xl">
+      Live monitoring: chaos experiments, CPU metrics, stability timeline.
+    </p>
+
+    <!-- Dashboard placeholder / screenshot -->
+    <div class="gradient-border rounded-2xl overflow-hidden mb-8 glow">
+      <div class="aspect-video bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center relative">
+        <img src="/img/dashboard/grafana-preview.png" alt="ARAX LABS Dashboard" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8 dashboard-fallback" style="display:none;">
+          <div class="text-6xl mb-4">📊</div>
+          <p class="text-white text-xl font-semibold mb-2">Dashboard Demo Coming Soon</p>
+          <p class="text-slate-400">Recording with Noteboom...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="flex flex-wrap gap-3 justify-center">
+      <span class="px-4 py-2 rounded-lg text-sm border border-indigo-500/30 bg-indigo-500/10 text-indigo-300">Chaos Mesh Integration</span>
+      <span class="px-4 py-2 rounded-lg text-sm border border-indigo-500/30 bg-indigo-500/10 text-indigo-300">Real-time Energy Metrics</span>
+      <span class="px-4 py-2 rounded-lg text-sm border border-indigo-500/30 bg-indigo-500/10 text-indigo-300">Dynamic Thresholds</span>
+      <span class="px-4 py-2 rounded-lg text-sm border border-indigo-500/30 bg-indigo-500/10 text-indigo-300">Adaptive Scrape Control</span>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('img[onerror]').forEach(img => {
+    img.addEventListener('error', function() {
+      this.style.display = 'none';
+      const fallback = this.nextElementSibling;
+      if (fallback) fallback.style.display = 'flex';
+    });
+  });
+</script>

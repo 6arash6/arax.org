@@ -1,58 +1,43 @@
-# ARAX LABS
+# Astro Starter Kit: Minimal
 
-AI-Driven Predictive Scaling for Energy-Efficient Infrastructure
-
-## Live Site
-
-[araxlabs.org](https://araxlabs.org)
-
-## What We Do
-
-ARAX LABS builds AI-driven predictive scaling platforms that reduce data center energy consumption by 15-30%. Our tool-agnostic approach works across Kubernetes, Slurm, MPI, OpenStack, and Terraform.
-
-**Phase 1 (B2B):** Data center energy optimization
-**Phase 2 (B2B2B):** Grid-SaaS for energy utilities — predictive load forecasting to manage grid congestion from the AI boom.
-
-## Tech Stack
-
-- **Telemetry:** eBPF, Kepler, Prometheus, OpenTelemetry
-- **ML Models:** LightGBM, XGBoost, LSTM, SGD Online
-- **Orchestration:** Kubernetes, Slurm, MPI, OpenShift, Terraform
-- **Cloud:** Azure, GCP, AWS, OpenStack, Oracle Cloud
-
-## Traction
-
-- INiTS ScaleUp Program (Dec 2025)
-- AWS First Incubator 2026
-- TRL 6 — Technology demonstrated in relevant environment
-- Master's thesis = direct R&D pipeline
-
-## Contact
-
-- Email: [arash.javan@araxlabs.org](mailto:arash.javan@araxlabs.org)
-- YouTube: [@AraX-Labs](https://www.youtube.com/@AraX-Labs)
-- GitHub: [6arash6](https://github.com/6arash6)
-- LinkedIn: [arash-javan](https://linkedin.com/in/arash-javan)
-
-## Development
-
-The site is built with [Reveal.js](https://revealjs.com/) and hosted on GitHub Pages.
-
-To run locally:
-
-```bash
-# Open index.html in a browser, or use a local server:
-python3 -m http.server 8000
-# Then visit http://localhost:8000
+```sh
+npm create astro@latest -- --template minimal
 ```
 
-## Assets
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-- `img/infographics/` — Place Nano Banana infographics here
-- `img/thesis/` — Research figures from the Master's thesis
-- `img/dashboard/` — Grafana dashboard screenshots
-- `video/` — Place Noteboom recordings here
+## 🚀 Project Structure
 
-## License
+Inside of your Astro project, you'll see the following folders and files:
 
-Proprietary — ARAX LABS
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
+
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
