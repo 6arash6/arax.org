@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARAX LABS — AI-Driven Predictive Scaling for Energy-Efficient Infrastructure</title>
+  <meta name="description" content="ARAX LABS builds AI-driven predictive scaling platforms that reduce data center energy consumption by 15-30%. INiTS ScaleUp Program, Vienna.">
+  <meta property="og:title" content="ARAX LABS — Predictive Scaling for Energy-Efficient Infrastructure">
+  <meta property="og:description" content="AI-driven predictive scaling that reduces data center energy waste by 15-30%. Tool-agnostic. Grid-SaaS ready.">
+  <meta property="og:image" content="img/arax_labs_logo_square_gradient_clean.png">
+  <meta property="og:url" content="https://araxlabs.org">
+  <link rel="icon" href="img/arax_labs_logo_square_gradient_clean.png" type="image/png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- SLIDE 1: HERO -->
+      <section data-background-color="#0a0a0a">
+        <img src="img/arax_labs_logo_square_gradient_clean.png" alt="ARAX LABS" class="logo-hero">
+        <h1 class="hero-title">ARAX LABS</h1>
+        <p class="hero-tagline">AI-Driven Predictive Scaling<br>for Energy-Efficient Infrastructure</p>
+        <div class="hero-badges">
+          <span class="badge">INiTS ScaleUp</span>
+          <span class="badge">AWS First Incubator</span>
+          <span class="badge">TRL 6</span>
+        </div>
+        <aside class="notes">
+          ARAX LABS: startup from Master's thesis, accepted into INiTS ScaleUp and AWS First Incubator.
+        </aside>
+      </section>
+
+      <!-- SLIDE 2: PROBLEM -->
+      <section data-background-color="#0a0a0a">
+        <h2>The Problem</h2>
+        <div class="two-column">
+          <div class="column">
+            <div class="stat-big">~30%</div>
+            <p>of data center energy is <strong>wasted</strong></p>
+            <ul class="problem-list">
+              <li>Zombie workloads running with no purpose</li>
+              <li>Static resource allocation that doesn't adapt</li>
+              <li>Observability systems scraping constantly — even when nothing happens</li>
+            </ul>
+          </div>
+          <div class="column">
+            <div class="stat-big accent">Grid Stress</div>
+            <p>AI boom is <strong>overloading energy grids</strong></p>
+            <ul class="problem-list">
+              <li>Single AI training run: hundreds of MW</li>
+              <li>Grid operators can't predict data center load</li>
+              <li>Emergency peak power is expensive & dirty</li>
+            </ul>
+          </div>
+        </div>
+        <p class="source">Sources: IEA Data Centres Report, EU Energy Efficiency Directive</p>
+        <aside class="notes">
+          The problem is two-fold: waste inside data centers AND stress on the energy grid from AI growth.
+        </aside>
+      </section>
+
+      <!-- SLIDE 3: SOLUTION -->
+      <section data-background-color="#0a0a0a">
+        <h2>The Solution</h2>
+        <div class="solution-highlight">
+          <div class="stat-big accent">15–30%</div>
+          <p>OPEX reduction through <strong>AI-driven predictive scaling</strong></p>
+        </div>
+        <div class="three-column">
+          <div class="column">
+            <h3>Predictive</h3>
+            <p>Forecast workload stability <em>before</em> problems occur</p>
+          </div>
+          <div class="column">
+            <h3>Tool-Agnostic</h3>
+            <p>Works across Kubernetes, Slurm, MPI, OpenStack, Terraform</p>
+          </div>
+          <div class="column">
+            <h3>Energy-Aware</h3>
+            <p>Minimizes monitoring overhead while maintaining SRE visibility</p>
+          </div>
+        </div>
+        <div class="tech-brief">
+          <p><strong>Core:</strong> eBPF + Kepler telemetry | LightGBM models | ~4ms inference | Model-Predictive Control</p>
+        </div>
+        <aside class="notes">
+          Not reactive autoscaling — predictive scaling. Works across all major orchestration platforms.
+        </aside>
+      </section>
+
+      <!-- SLIDE 4: GRID-SAAS VISION -->
+      <section data-background-color="#0a0a0a">
+        <h2>The Vision: Grid-SaaS</h2>
+        <p class="subtitle">From data center optimization to energy utility intelligence</p>
+        <div class="pivot-flow">
+          <div class="pivot-box">
+            <h3>Phase 1 — B2B</h3>
+            <p>Data centers reduce their energy costs</p>
+            <div class="pivot-arrow">→</div>
+          </div>
+          <div class="pivot-box highlight">
+            <h3>Phase 2 — B2B2B</h3>
+            <p>Energy utilities predict data center load to manage grid congestion</p>
+          </div>
+        </div>
+        <blockquote class="pitch-quote">
+          "Our customer is no longer just the data center trying to save power.<br>
+          Our customer is the energy utility provider. We sell them predictive load forecasting<br>
+          to manage grid congestion caused by the AI boom."
+        </blockquote>
+        <div class="grid-benefits">
+          <span>Demand Response</span>
+          <span>Day-Ahead Market Optimization</span>
+          <span>Renewable Integration</span>
+          <span>EU EED Compliance</span>
+        </div>
+        <aside class="notes">
+          The million-dollar pivot: from saving data centers money to helping energy utilities manage the grid.
+        </aside>
+      </section>
+
+      <!-- SLIDE 5: DASHBOARD PREVIEW -->
+      <section data-background-color="#0a0a0a">
+        <h2>Dashboard Preview</h2>
+        <p class="subtitle">Live monitoring: chaos experiments, CPU metrics, stability timeline</p>
+        <div class="dashboard-preview">
+          <img src="img/dashboard/grafana-preview.png" alt="ARAX LABS Grafana Dashboard" class="dashboard-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <div class="dashboard-placeholder" style="display:none;">
+            <div class="placeholder-icon">&#x1f4ca;</div>
+            <p>Dashboard demo coming soon</p>
+            <p class="placeholder-sub">Recording with Noteboom...</p>
+          </div>
+        </div>
+        <div class="dashboard-features">
+          <span>Chaos Mesh Integration</span>
+          <span>Real-time Energy Metrics</span>
+          <span>Dynamic Thresholds</span>
+          <span>Adaptive Scrape Control</span>
+        </div>
+        <aside class="notes">
+          Grafana dashboard showing live adaptive telemetry in action — chaos experiments, CPU metrics, stability predictions.
+        </aside>
+      </section>
+
+      <!-- SLIDE 6: TECHNOLOGY -->
+      <section data-background-color="#0a0a0a">
+        <h2>Technology Stack</h2>
+        <div class="tech-grid">
+          <div class="tech-item">
+            <h3>Telemetry</h3>
+            <p>eBPF, Kepler, Prometheus, OpenTelemetry</p>
+          </div>
+          <div class="tech-item">
+            <h3>ML Models</h3>
+            <p>LightGBM, XGBoost, LSTM, SGD Online</p>
+          </div>
+          <div class="tech-item">
+            <h3>Orchestration</h3>
+            <p>Kubernetes, Slurm, MPI, OpenShift, Terraform</p>
+          </div>
+          <div class="tech-item">
+            <h3>Cloud</h3>
+            <p>Azure, GCP, AWS, OpenStack, Oracle Cloud</p>
+          </div>
+        </div>
+        <div class="thesis-figures">
+          <img src="img/thesis/fig3_2_top20_mi.png" alt="Feature Importance" class="thesis-img">
+          <img src="img/thesis/fig3_3_shap.png" alt="SHAP Analysis" class="thesis-img">
+        </div>
+        <aside class="notes">
+          Full-stack: eBPF telemetry → Kepler energy measurement → LightGBM prediction → MPC control.
+        </aside>
+      </section>
+
+      <!-- SLIDE 7: RESULTS -->
+      <section data-background-color="#0a0a0a">
+        <h2>Results</h2>
+        <div class="results-grid">
+          <div class="result-card">
+            <img src="img/thesis/fig3_4_stability_timeline.png" alt="Stability Timeline" class="result-img">
+            <p>Adaptive scaling maintains stability during workload transitions</p>
+          </div>
+          <div class="result-card">
+            <img src="img/thesis/fig3_5_detection_delay.png" alt="Detection Delay" class="result-img">
+            <p>Fault detection delays under 5% vs. static configurations</p>
+          </div>
+          <div class="result-card">
+            <img src="img/thesis/summary_model_comparison.png" alt="Model Comparison" class="result-img">
+            <p>LightGBM: 10x better RMSE than linear baselines, 2x faster than LSTM</p>
+          </div>
+          <div class="result-card">
+            <img src="img/thesis/exp2_roc_curves.png" alt="ROC Curves" class="result-img">
+            <p>~4ms inference latency — suitable for real-time control loops</p>
+          </div>
+        </div>
+        <aside class="notes">
+          Empirical validation: LightGBM wins on accuracy, speed, and energy footprint.
+        </aside>
+      </section>
+
+      <!-- SLIDE 8: MARKET -->
+      <section data-background-color="#0a0a0a">
+        <h2>Market Opportunity</h2>
+        <div class="market-grid">
+          <div class="market-segment">
+            <h3>Data Centers</h3>
+            <div class="market-size">€500K–€5M</div>
+            <p>annual energy costs per mid-size facility</p>
+            <div class="market-savings">15–30% savings → €75K–€1.5M/customer</div>
+          </div>
+          <div class="market-segment">
+            <h3>Energy Utilities</h3>
+            <div class="market-size">B2B2B SaaS</div>
+            <p>Predictive load forecasting for grid management</p>
+            <div class="market-savings">Larger contract values, recurring revenue</div>
+          </div>
+        </div>
+        <div class="arr-projection">
+          <div class="arr-box">
+            <div class="arr-number">€37.5K–€3M</div>
+            <p>ARR potential by Year 2 (5–10 customers)</p>
+          </div>
+          <div class="arr-box">
+            <div class="arr-number">10–20%</div>
+            <p>of customer savings = ARAX revenue</p>
+          </div>
+        </div>
+        <div class="market-drivers">
+          <span>EU Green Deal</span>
+          <span>Energy Efficiency Directive</span>
+          <span>AI Infrastructure Boom</span>
+          <span>ESG Requirements</span>
+        </div>
+        <aside class="notes">
+          Two revenue streams: direct data center savings + energy utility SaaS.
+        </aside>
+      </section>
+
+      <!-- SLIDE 9: TRACTION -->
+      <section data-background-color="#0a0a0a">
+        <h2>Traction</h2>
+        <div class="traction-timeline">
+          <div class="traction-item">
+            <div class="traction-date">Dec 2025</div>
+            <div class="traction-detail">Accepted into <strong>INiTS ScaleUp Program</strong></div>
+          </div>
+          <div class="traction-item">
+            <div class="traction-date">2026</div>
+            <div class="traction-detail"><strong>AWS First Incubator</strong> — pitch submitted</div>
+          </div>
+          <div class="traction-item">
+            <div class="traction-date">TRL 6</div>
+            <div class="traction-detail">Technology demonstrated in relevant environment</div>
+          </div>
+          <div class="traction-item">
+            <div class="traction-date">R&D</div>
+            <div class="traction-detail">Master's thesis = direct R&D pipeline</div>
+          </div>
+        </div>
+        <div class="youtube-embed">
+          <p>Watch our pitch:</p>
+          <a href="https://www.youtube.com/@AraX-Labs" target="_blank" class="youtube-link">
+            <span class="youtube-icon">&#9654;</span> @AraX-Labs on YouTube
+          </a>
+        </div>
+        <aside class="notes">
+          Real traction: INiTS acceptance, AWS Incubator, thesis as R&D foundation.
+        </aside>
+      </section>
+
+      <!-- SLIDE 10: TEAM -->
+      <section data-background-color="#0a0a0a">
+        <h2>Team</h2>
+        <div class="team-card">
+          <div class="team-info">
+            <h3>Arash Javan Mojarad</h3>
+            <p class="team-role">Founder & CTO</p>
+            <ul class="team-creds">
+              <li>MSc Electrical Engineering (Energy Systems)</li>
+              <li>MSc Data Science — FH Technikum Wien</li>
+              <li>Platform Engineer — TU Wien VSC (MUSICA Supercomputer)</li>
+              <li>95+ certifications (Azure, Red Hat, LPIC-1, Oracle, IBM)</li>
+            </ul>
+          </div>
+          <div class="team-unique">
+            <h4>Unique Positioning</h4>
+            <div class="venn-diagram">
+              <div class="venn-item">Energy Systems</div>
+              <div class="venn-item">MLOps</div>
+              <div class="venn-item">Distributed Systems</div>
+            </div>
+            <p>Most tools optimize one. ARAX connects all three.</p>
+          </div>
+        </div>
+        <aside class="notes">
+          Unique combination: energy domain expertise + cloud infrastructure + AI/ML. Hands-on supercomputer ops.
+        </aside>
+      </section>
+
+      <!-- SLIDE 11: CONTACT -->
+      <section data-background-color="#0a0a0a">
+        <h2>Get in Touch</h2>
+        <div class="contact-grid">
+          <div class="contact-form-wrapper">
+            <form id="contact-form" action="https://formspree.io/f/xyzwokvp" method="POST">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div id="form-success" class="form-success" style="display:none;">
+              Message sent! We'll get back to you soon.
+            </div>
+          </div>
+          <div class="contact-info">
+            <div class="contact-item">
+              <strong>Email:</strong>
+              <a href="mailto:arash.javan@araxlabs.org">arash.javan@araxlabs.org</a>
+            </div>
+            <div class="contact-item">
+              <strong>YouTube:</strong>
+              <a href="https://www.youtube.com/@AraX-Labs" target="_blank">@AraX-Labs</a>
+            </div>
+            <div class="contact-item">
+              <strong>GitHub:</strong>
+              <a href="https://github.com/6arash6" target="_blank">github.com/6arash6</a>
+            </div>
+            <div class="contact-item">
+              <strong>LinkedIn:</strong>
+              <a href="https://linkedin.com/in/arash-javan" target="_blank">linkedin.com/in/arash-javan</a>
+            </div>
+            <div class="contact-item">
+              <strong>Location:</strong> Vienna, Austria
+            </div>
+          </div>
+        </div>
+        <aside class="notes">
+          Open to investors, grants, pilots, and partnerships.
+        </aside>
+      </section>
+
+    </div><!-- .slides -->
+  </div><!-- .reveal -->
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+</html>
