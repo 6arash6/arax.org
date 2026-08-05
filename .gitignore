@@ -10,3 +10,6 @@ Thumbs.db
 dist/
 .astro/
 node_modules/
+
+# Notes (not deployed)
+_notes/
