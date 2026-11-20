@@ -1,0 +1,54 @@
+---
+// JSON-LD structured data for ARAX LABS (Organization, WebSite, founder Person).
+// Helps search engines and AI answer engines identify the entity and its official profiles.
+// Keep the description factual and in sync with the llms.txt summary.
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://araxlabs.org/#organization',
+      name: 'ARAX LABS',
+      url: 'https://araxlabs.org/',
+      logo: 'https://araxlabs.org/favicon.png',
+      description:
+        'Vienna-based deep-tech startup project in the INiTS ScaleUp programme, researching energy-efficient infrastructure. Current research focus: measuring and analysing the CPU overhead of observability infrastructure (eBPF, OpenTelemetry, Prometheus, Grafana, Jaeger) in Kubernetes environments.',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Vienna',
+        addressCountry: 'AT',
+      },
+      founder: { '@id': 'https://araxlabs.org/#founder' },
+      sameAs: [
+        'https://www.youtube.com/@AraX-Labs',
+        'https://www.linkedin.com/company/araxai',
+        'https://github.com/6arash6',
+        'https://x.com/AraX_Labs',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://araxlabs.org/#website',
+      url: 'https://araxlabs.org/',
+      name: 'ARAX LABS',
+      publisher: { '@id': 'https://araxlabs.org/#organization' },
+      inLanguage: 'en',
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://araxlabs.org/#founder',
+      name: 'Arash Javan Mojarad',
+      jobTitle: 'Founder & CTO',
+      worksFor: { '@id': 'https://araxlabs.org/#organization' },
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Vienna',
+        addressCountry: 'AT',
+      },
+      sameAs: ['https://www.linkedin.com/in/arash-javan', 'https://github.com/6arash6'],
+    },
+  ],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

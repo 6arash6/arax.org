@@ -1,0 +1,33 @@
+# ARAX LABS
+
+> ARAX LABS is a Vienna-based deep-tech startup project in the INiTS ScaleUp programme, researching energy-efficient infrastructure. Its current research focus is measuring and analysing the CPU overhead of observability infrastructure — eBPF instrumentation, OpenTelemetry, Prometheus, Grafana and Jaeger — using the Google Online Boutique workload and Chaos Mesh anomaly injection. The central research question: how much overhead does observability introduce, and can it be reduced without losing useful observability?
+
+## Key facts
+
+- Location: Vienna, Austria
+- Programme: INiTS ScaleUp (from December 2025)
+- Founder & CTO: Arash Javan Mojarad — MSc Electrical Engineering (Energy Systems); MSc AI & Data Science, FH Technikum Wien (in progress); previously Platform Engineer at TU Wien / Vienna Scientific Cluster (VSC-4/VSC-5); 95+ certifications
+- Status: pre-founding (not yet legally registered)
+- Research stack: eBPF, Kepler, OpenTelemetry, Prometheus, Grafana, Jaeger, Chaos Mesh, Kubernetes
+
+## Roadmap (not current capabilities)
+
+- Adaptive and energy-aware observability
+- Predictive resource management and model-predictive control
+- Energy-aware workload placement and scheduling
+- Grid-carbon and electricity-market integration (Grid-SaaS for energy utilities)
+- Cross-platform orchestration across Kubernetes, Slurm, OpenShift and OpenStack
+
+## Links
+
+- Website: https://araxlabs.org/
+- Pitch deck: https://araxlabs.org/pitch-deck
+- YouTube: https://www.youtube.com/@AraX-Labs
+- LinkedIn (company): https://www.linkedin.com/company/araxai
+- LinkedIn (founder): https://www.linkedin.com/in/arash-javan
+- GitHub: https://github.com/6arash6
+- X: https://x.com/AraX_Labs
+
+## Contact
+
+Open to pilots, partnerships, research collaboration and grants. Contact via the website or LinkedIn.

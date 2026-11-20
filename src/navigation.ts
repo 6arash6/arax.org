@@ -28,6 +28,7 @@ export const footerData = {
       links: [
         { text: 'YouTube', href: 'https://www.youtube.com/@AraX-Labs' },
         { text: 'GitHub', href: 'https://github.com/6arash6' },
+        { text: 'LinkedIn (Company)', href: 'https://www.linkedin.com/company/araxai' },
         { text: 'LinkedIn', href: 'https://linkedin.com/in/arash-javan' },
       ],
     },
