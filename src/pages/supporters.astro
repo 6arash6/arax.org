@@ -1,0 +1,357 @@
+---
+import Layout from '~/layouts/Layout.astro';
+
+const metadata = {
+  title: 'ARAX LABS — Backed By',
+  description:
+    'ARAX LABS is built inside Vienna\u2019s startup ecosystem and on open infrastructure. The programmes that support us, the stack we build on, and the founder credit programmes we are applying to next.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <style is:global>
+    :root {
+      color-scheme: dark;
+      --arax-bg: #060b14;
+      --arax-surface: rgba(10, 17, 30, 0.72);
+      --arax-border: rgba(132, 204, 255, 0.16);
+      --arax-text: #e7f0ff;
+      --arax-muted: rgba(231, 240, 255, 0.72);
+      --arax-accent: #59b8ff;
+      --arax-accent-2: #8df0c8;
+      --arax-warn: #f6c177;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(89, 184, 255, 0.18), transparent 32%),
+        radial-gradient(circle at 85% 20%, rgba(141, 240, 200, 0.16), transparent 24%),
+        linear-gradient(160deg, #04070d 0%, #07121f 52%, #020408 100%);
+      color: var(--arax-text);
+      font-family: 'Inter Variable', 'Inter', system-ui, sans-serif;
+    }
+
+    .wrap {
+      width: min(1100px, calc(100vw - 2.5rem));
+      margin: 0 auto;
+      padding: 2rem 0 4rem;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0 2.5rem;
+    }
+
+    .topbar .brand {
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .topbar a.home {
+      color: var(--arax-accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(89, 184, 255, 0.28);
+      background: rgba(89, 184, 255, 0.1);
+      color: #bfe4ff;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin: 1.2rem 0 1rem;
+      text-wrap: balance;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      letter-spacing: -0.02em;
+      margin: 0 0 0.6rem;
+    }
+
+    .lede {
+      color: var(--arax-muted);
+      font-size: 1.12rem;
+      line-height: 1.65;
+      max-width: 46rem;
+    }
+
+    section {
+      margin-top: 3.5rem;
+    }
+
+    .section-sub {
+      color: var(--arax-muted);
+      line-height: 1.6;
+      max-width: 44rem;
+      margin: 0 0 1.4rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.1rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    @media (max-width: 820px) {
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--arax-surface);
+      border: 1px solid var(--arax-border);
+      border-radius: 22px;
+      padding: 1.5rem;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .card h3 {
+      margin: 0.7rem 0 0.5rem;
+      font-size: 1.3rem;
+      letter-spacing: -0.01em;
+    }
+
+    .card p {
+      color: var(--arax-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .card .big {
+      font-size: 1.05rem;
+      color: var(--arax-text);
+    }
+
+    .status {
+      display: inline-block;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .status.in {
+      background: rgba(141, 240, 200, 0.14);
+      border: 1px solid rgba(141, 240, 200, 0.4);
+      color: var(--arax-accent-2);
+    }
+
+    .status.applied {
+      background: rgba(246, 193, 119, 0.12);
+      border: 1px solid rgba(246, 193, 119, 0.4);
+      color: var(--arax-warn);
+    }
+
+    .status.next {
+      background: rgba(89, 184, 255, 0.1);
+      border: 1px solid rgba(89, 184, 255, 0.35);
+      color: #bfe4ff;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .chip {
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.04);
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+
+    .honest {
+      border: 1px dashed rgba(141, 240, 200, 0.35);
+      border-radius: 18px;
+      padding: 1.1rem 1.3rem;
+      color: var(--arax-muted);
+      line-height: 1.6;
+      margin-top: 1.4rem;
+    }
+
+    .honest strong {
+      color: var(--arax-accent-2);
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 0.9rem 1.8rem;
+      border-radius: 999px;
+      background: var(--arax-accent);
+      color: #04101f;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(231, 240, 255, 0.45);
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+  </style>
+
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="/">ARAX LABS</a>
+      <a class="home" href="/">← Back to araxlabs.org</a>
+    </div>
+
+    <span class="eyebrow">Support &amp; Ecosystem</span>
+    <h1>Backed by the ecosystem that builds the internet.</h1>
+    <p class="lede">
+      ARAX LABS measures how much energy and CPU the world&apos;s observability infrastructure wastes — and we
+      build the company the lean way: inside Vienna&apos;s startup ecosystem, on open-source infrastructure, and
+      on the founder programmes the big technology platforms run for early-stage teams.
+    </p>
+
+    <section>
+      <h2>Programme support</h2>
+      <p class="section-sub">The programmes ARAX LABS is part of, and the ones with an application in.</p>
+      <div class="grid-2">
+        <div class="card">
+          <span class="status in">In the programme</span>
+          <h3>INiTS — Vienna&apos;s High-Tech Incubator</h3>
+          <p>
+            ARAX LABS is a participant in the INiTS ScaleUp programme in Vienna. INiTS is the university
+            incubator founded by the University of Vienna, TU Wien and the Vienna Business Agency, and has
+            supported technology startups in Vienna for over two decades.
+          </p>
+        </div>
+        <div class="card">
+          <span class="status applied">Application submitted</span>
+          <h3>AWS First Incubator 2026</h3>
+          <p>
+            Our pitch for the AWS First Incubator 2026 is submitted. The programme supports early-stage
+            startups in Austria building on AWS, with mentoring, technical support and cloud credits.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Built on open infrastructure</h2>
+      <p class="section-sub">
+        No badges we haven&apos;t earned here either: this is the actual stack our prototype runs on and
+        measures — the observability pipeline whose overhead ARAX quantifies.
+      </p>
+      <div class="chips">
+        <span class="chip">Kubernetes</span>
+        <span class="chip">eBPF</span>
+        <span class="chip">Kepler</span>
+        <span class="chip">OpenTelemetry</span>
+        <span class="chip">Prometheus</span>
+        <span class="chip">Grafana</span>
+        <span class="chip">Jaeger</span>
+        <span class="chip">Chaos Mesh</span>
+        <span class="chip">Google Online Boutique (test workload)</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>The founder stack</h2>
+      <p class="section-sub">
+        Big technology platforms run credit programmes so early startups can build on their infrastructure
+        for free. We run on one free tier today, and these are the programmes on our application roadmap —
+        each labelled with its real status.
+      </p>
+      <div class="grid-3">
+        <div class="card">
+          <span class="status in">In use</span>
+          <h3>Oracle Cloud Free Tier</h3>
+          <p class="big">Always-free instances, Frankfurt region</p>
+          <p>Our first test instance has run on Oracle Cloud&apos;s free tier since July 2026.</p>
+        </div>
+        <div class="card">
+          <span class="status next">Applying next</span>
+          <h3>Cloudflare for Startups</h3>
+          <p class="big">Up to $250,000 in platform credits</p>
+          <p>Edge, security and developer-platform credits — and being part of an approved accelerator counts as a bonus on the application.</p>
+        </div>
+        <div class="card">
+          <span class="status next">Applying next</span>
+          <h3>AWS Activate</h3>
+          <p class="big">Up to $200,000 in AWS credits via Activate Portfolio</p>
+          <p>The natural next step alongside our AWS First Incubator application.</p>
+        </div>
+        <div class="card">
+          <span class="status next">Applying next</span>
+          <h3>Google for Startups Cloud Program</h3>
+          <p class="big">Up to $200,000 — up to $350,000 for AI-first startups</p>
+          <p>Two years of Google Cloud credits, training and startup experts for funded teams.</p>
+        </div>
+        <div class="card">
+          <span class="status next">Applying next</span>
+          <h3>Microsoft for Startups</h3>
+          <p class="big">Up to $150,000 in Azure credits</p>
+          <p>Founders Hub credits plus technical advisory — relevant for our Azure and OpenShift work.</p>
+        </div>
+        <div class="card">
+          <span class="status next">Applying next</span>
+          <h3>NVIDIA Inception</h3>
+          <p class="big">Free membership, GPU ecosystem access</p>
+          <p>Built for AI startups: partner offers, training and go-to-market support for GPU workloads.</p>
+        </div>
+      </div>
+      <div class="honest">
+        <strong>Our rule for this page:</strong> a programme appears as support only when it is real.
+        “In use” means we run on it today, “Application submitted” means exactly that, and “Applying next” is
+        a roadmap — published openly, because we think more founders should know these programmes exist.
+      </div>
+    </section>
+
+    <div class="cta">
+      <h2>Building infrastructure with us?</h2>
+      <p class="section-sub" style="margin-left:auto;margin-right:auto;">
+        We are looking for pilot partners in data centers and energy — and a business co-founder in Vienna.
+      </p>
+      <a href="/#contact">Get in touch</a>
+    </div>
+
+    <footer>
+      © 2026 ARAX LABS. Programme and product names are trademarks of their respective owners; listing a
+      programme under “Applying next” describes our application roadmap and does not imply endorsement or
+      acceptance. Credit figures are the programmes&apos; published maximums, checked November 2026.
+    </footer>
+  </div>
+</Layout>

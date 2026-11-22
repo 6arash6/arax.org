@@ -8,6 +8,7 @@ export const headerData = {
     { text: 'Results', href: '#results' },
     { text: 'Market', href: '#market' },
     { text: 'Team', href: '#team' },
+    { text: 'Backed by', href: '/supporters' },
   ],
   actions: [{ text: 'Contact', href: '#contact' }],
 };
@@ -21,6 +22,7 @@ export const footerData = {
         { text: 'Solution', href: '#solution' },
         { text: 'Technology', href: '#technology' },
         { text: 'Market', href: '#market' },
+        { text: 'Backed by', href: '/supporters' },
       ],
     },
     {
